@@ -1,5 +1,4 @@
 ---
-
 - name: Install required packages for Git
   package:
     name: "{{ git_package }}"
