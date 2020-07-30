@@ -1,2 +1,8 @@
 ---
-# tasks file for template
+
+- name: Install required packages for Git
+  package:
+    name: "{{ git_package }}"
+    state: present
+  tags:
+    - packages
