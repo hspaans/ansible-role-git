@@ -23,7 +23,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: hspaans.git, become: true }
+        - { role: hspaans.git, become: true }
 
 License
 -------
