@@ -15,10 +15,8 @@ name: Lint Code Base
 # Start the job on all push #
 #############################
 on:
-  push:
-    branches-ignore:
-      - master
   pull_request:
+  push:
     branches:
       - master
 
@@ -48,7 +46,7 @@ jobs:
       - name: Lint Code Base
         uses: github/super-linter@v3.13.5
         env:
-          VALIDATE_ALL_CODEBASE: true
-          DEFAULT_BRANCH: master
+          VALIDATE_EDITORCONFIG: false
+          OUTPUT_FORMAT: tap
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ANSIBLE_DIRECTORY: /
