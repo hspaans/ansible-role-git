@@ -46,7 +46,5 @@ jobs:
       - name: Lint Code Base
         uses: github/super-linter@v3.14.0
         env:
-          VALIDATE_EDITORCONFIG: false
-          OUTPUT_FORMAT: tap
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ANSIBLE_DIRECTORY: /
